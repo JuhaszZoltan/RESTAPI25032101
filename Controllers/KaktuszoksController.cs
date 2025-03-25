@@ -23,7 +23,6 @@ namespace RESTAPI25032101.Controllers
 
         // GET: api/Kaktuszoks
         [HttpGet]
-        [EnableCors]
         public async Task<ActionResult<IEnumerable<Kaktuszok>>> GetKaktuszoks()
         {
             return await _context.Kaktuszoks.ToListAsync();
@@ -31,7 +30,6 @@ namespace RESTAPI25032101.Controllers
 
         // GET: api/Kaktuszoks/5
         [HttpGet("{id}")]
-        [EnableCors]
         public async Task<ActionResult<Kaktuszok>> GetKaktuszok(int id)
         {
             var kaktuszok = await _context.Kaktuszoks.FindAsync(id);
